@@ -1,0 +1,931 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#C34323"
+    tools:context="br.com.devpa.interface_pokemon.MainActivity"
+    android:id="@+id/oi"
+    android:keepScreenOn="true">
+
+    <android.support.v7.widget.CardView
+
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardMesa"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="8dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#D96D54"
+            android:gravity="center"
+            android:id="@+id/lin">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="3dp">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/oneoff"
+                    android:background="@drawable/oneoff"
+                    android:layout_margin="5dp"
+                    android:onClick="reiniciar" />
+                <ImageButton
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:id="@+id/moeda"
+                    android:background="@drawable/moeda"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:onClick="moeda" />
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card1"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <ImageButton
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/fechar1"
+                                    android:background="@drawable/fechar"
+                                    android:layout_margin="3dp"
+                                    android:onClick="morreu1" />
+                                <ImageButton
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/change"
+                                    android:background="@drawable/change"
+                                    android:layout_margin="3dp"
+                                    android:onClick="trocar" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp1"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginLeft="4dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_marginRight="3dp">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo1"
+                                        android:background="@drawable/baixo"
+                                        android:layout_gravity="center|right"
+                                        android:onClick="baixo1" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima1"
+                                        android:background="@drawable/cima"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_gravity="center"
+                                        android:onClick="cima1" />
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir1"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir1" />
+
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno1"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno1" />
+
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo1"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4dp"
+                                        android:onClick="fogo1" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado1"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado1" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso1"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso1" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#5C8ECE"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Round 01"
+                        android:id="@+id/round"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"
+                        android:typeface="monospace"
+                        android:singleLine="false"
+                        android:layout_margin="10dp"
+                        android:gravity="center"/>
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/refresh"
+                        android:background="@drawable/refresh"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:onClick="vez" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="3dp">
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card2"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/fechar2"
+                                android:background="@drawable/fechar"
+                                android:layout_margin="3dp"
+                                android:onClick="morreu2" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp2"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_marginLeft="3dp">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo2"
+                                        android:background="@drawable/baixo"
+                                        android:layout_gravity="center|right"
+                                        android:onClick="baixo2" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima2"
+                                        android:background="@drawable/cima"
+                                        android:layout_gravity="center|right"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:onClick="cima2" />
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir2"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_below="@+id/life1"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir2" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno2"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno2" />
+
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo2"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4sp"
+                                        android:onClick="fogo2" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado2"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado2" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso2"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso2" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card3"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/fechar3"
+                                android:background="@drawable/fechar"
+                                android:layout_margin="3dp"
+                                android:onClick="morreu3" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo3"
+                                        android:onClick="baixo3"
+                                        android:background="@drawable/baixo" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima3"
+                                        android:background="@drawable/cima"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="4dp"
+                                        android:onClick="cima3"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp3"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir3"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_below="@+id/life1"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir3" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno3"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno3" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo3"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4sp"
+                                        android:onClick="fogo3" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado3"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado3" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso3"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso3" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card4"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/fechar4"
+                                android:background="@drawable/fechar"
+                                android:layout_margin="3dp"
+                                android:onClick="morreu4" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo4"
+                                        android:onClick="baixo4"
+                                        android:background="@drawable/baixo" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima4"
+                                        android:background="@drawable/cima"
+                                        android:layout_marginLeft="4dp"
+                                        android:onClick="cima4"
+                                        android:layout_marginRight="4dp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp4"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp" />
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir4"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_below="@+id/life1"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir4" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno4"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno4" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo4"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4dp"
+                                        android:onClick="fogo4" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado4"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado4" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso4"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso4" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card5"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/fechar5"
+                                android:background="@drawable/fechar"
+                                android:layout_margin="3dp"
+                                android:onClick="morreu5" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo5"
+                                        android:onClick="baixo5"
+                                        android:background="@drawable/baixo" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima5"
+                                        android:background="@drawable/cima"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:onClick="cima5" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp5"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir5"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_below="@+id/life1"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir5" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno5"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno5" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo5"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4dp"
+                                        android:onClick="fogo5" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado5"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado5" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso5"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso5" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card6"
+                    android:layout_gravity="center"
+                    android:layout_width="105dp"
+                    android:layout_height="140dp"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="16dp"
+                    android:layout_margin="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/fechar6"
+                                android:background="@drawable/fechar"
+                                android:layout_margin="3dp"
+                                android:onClick="morreu6" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#5C8ECE">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="0 HP"
+                                    android:id="@+id/hp6"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"
+                                    android:typeface="monospace"
+                                    android:singleLine="false"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="8dp" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical">
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/baixo6"
+                                        android:background="@drawable/baixo"
+                                        android:onClick="baixo6" />
+
+                                    <ImageButton
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:id="@+id/cima6"
+                                        android:background="@drawable/cima"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:onClick="cima6" />
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/dormir6"
+                                        android:background="@drawable/sleep"
+                                        android:layout_marginTop="26dp"
+                                        android:layout_margin="4dp"
+                                        android:onClick="dormir6" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/veneno6"
+                                        android:background="@drawable/veneno"
+                                        android:layout_margin="4dp"
+                                        android:onClick="veneno6" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/fogo6"
+                                        android:background="@drawable/fogoo"
+                                        android:visibility="visible"
+                                        android:cropToPadding="false"
+                                        android:layout_margin="4dp"
+                                        android:onClick="fogo6" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/paralisado6"
+                                        android:background="@drawable/pessoaa"
+                                        android:layout_margin="4dp"
+                                        android:onClick="paralisado6" />
+                                    <ImageButton
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/confuso6"
+                                        android:background="@drawable/confuso"
+                                        android:layout_margin="4dp"
+                                        android:onClick="confuso6" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lose"
+                android:background="@drawable/losee"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

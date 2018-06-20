@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C34323"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView2"
+                android:background="@drawable/icon"
+                android:visibility="visible"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/letras"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desenvolvido por Lidia Rocha e Felipe Araújo"
+            android:id="@+id/texto1"
+            android:layout_alignRight="@+id/round"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom|center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Versão: 0.1"
+            android:id="@+id/texto2"
+            android:layout_alignRight="@+id/round"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>
